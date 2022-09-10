@@ -1,13 +1,10 @@
 .search-box {
-    display: flex;
-    flex-direction: column;
 
     &__label {
         font-size: 20px;
     }
 
     &__input {
-        margin: 20px 0;
         padding: 10px;
         font-size: 18px;
         border: 5px black solid;

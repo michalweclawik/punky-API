@@ -5,7 +5,7 @@ import CardList from "../CardList/CardList";
 const Main = ({ beersArr }) => {
   return (
     <div className="main">
-      <div className="main__heading">Drink....chose... responsibly!!</div>
+      <div className="main__heading">Drink responsibly!!</div>
       <div className="main__cardlist">
         <CardList beersArray={beersArr} />
       </div>
