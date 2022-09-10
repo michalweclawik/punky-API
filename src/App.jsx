@@ -1,12 +1,21 @@
-import "./App.css";
+import "./App.scss";
+import Nav from "./components/Nav/Nav";
+import Main from "./components/Main/Main";
+
+import beers from "./data/beers";
 
 function App() {
   return (
-    <div className="App">
-      <div className="content">
-        <h1>dzial</h1>
+    <>
+      <div className="app">
+        <section className="nav">
+          <Nav beersArr={beers} />
+        </section>
+        <section className="app__main">
+          <Main beersArr={beers} />
+        </section>
       </div>
-    </div>
+    </>
   );
 }
 
