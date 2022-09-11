@@ -5,9 +5,12 @@ import { useState } from "react";
 import beers from "./data/beers";
 
 function App() {
-  const [searchTerms, setSearchTerms] = useState("");
+  // api
   const [beerArrayForSearch, setbeerArrayForSearch] = useState(beers);
+  // Search
+  const [searchTerms, setSearchTerms] = useState("");
 
+  // filters
   const [highABVchecked, setHighABVchecked] = useState(false);
   const [acidicchecked, setacidicchecked] = useState(false);
 
@@ -16,23 +19,24 @@ function App() {
 
     if (e.target.value == "High ABV") {
       setHighABVchecked(!highABVchecked);
-      console.log("pressed");
+
       if (!highABVchecked) {
         const filteredBeersByHighABV = beers.filter((beer) => beer.abv > 6);
         setbeerArrayForSearch(filteredBeersByHighABV);
       } else {
         setbeerArrayForSearch(beers);
       }
-      // } else if (e.target.value == "Acidic") {
-      //   setacidicchecked(!acidicchecked);
-      //   if (!acidicchecked) {
-      //     const filteredBeersByAcidic = beers.filter((beer) => beer.ph < 4);
-      //     //  || beer.ph = null);
-      //     setbeerArrayForSearch(filteredBeersByAcidic);
-      //   }
-      // } else {
-      //   setbeerArrayForSearch(beers);
-      // }
+    }
+    if (e.target.value == "Acidic") {
+      setacidicchecked(!acidicchecked);
+
+      if (!acidicchecked) {
+        const filteredBeersByAcidic = beers.filter((beer) => beer.ph < 4);
+        //  || beer.ph = null);
+        setbeerArrayForSearch(filteredBeersByAcidic);
+      } else {
+        setbeerArrayForSearch(beers);
+      }
     }
   };
 
