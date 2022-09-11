@@ -27,13 +27,12 @@ const beerCard = ({ beer }) => {
           <dd className="beerCard__figure-value">{beer.ph}</dd>
         </dl>
       </div>
-      <div className="beerCard__description">
-        <p>{beer.description}</p>
-      </div>
       <ul className="beerCard__list">
         <li className="beerCard__list-header">Food Pairings</li>
-        {beer.food_pairing.map((pairing) => (
-          <li className="beerCard__list-content">{pairing}</li>
+        {beer.food_pairing.map((pairing, index) => (
+          <li className="beerCard__list-content" key={index}>
+            {pairing}
+          </li>
         ))}
       </ul>
     </div>

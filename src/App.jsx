@@ -6,6 +6,20 @@ import beers from "./data/beers";
 
 function App() {
   const [searchTerms, setSearchTerms] = useState("");
+  const [beerArrayForSearch, setbeerArrayForSearch] = useState(beers);
+
+  const [highABVchecked, setHighABVchecked] = useState(false);
+
+  const handleFilters = () => {
+    setHighABVchecked(!highABVchecked);
+    console.log(highABVchecked);
+    if (!highABVchecked) {
+      const filteredBeersByHighABV = beers.filter((beer) => beer.abv > 6);
+      setbeerArrayForSearch(filteredBeersByHighABV);
+    } else {
+      setbeerArrayForSearch(beers);
+    }
+  };
 
   const handleInput = (e) => {
     e.preventDefault();
@@ -13,7 +27,7 @@ function App() {
     setSearchTerms(clearInput);
   };
 
-  const filteredBeers = beers.filter((beer) => {
+  const filteredBeers = beerArrayForSearch.filter((beer) => {
     const beerToLowerCase = beer.name.toLowerCase();
     return beerToLowerCase.includes(searchTerms);
   });
@@ -21,7 +35,13 @@ function App() {
   return (
     <div className="app">
       <section className="nav">
-        <Nav label="beer" handleInput={handleInput} searchTerms={searchTerms} />
+        <Nav
+          label="beer"
+          handleInput={handleInput}
+          searchTerms={searchTerms}
+          highABVchecked={highABVchecked}
+          handleFilters={handleFilters}
+        />
       </section>
 
       <section className="app__main">
