@@ -2,6 +2,7 @@
 
     &__label {
         font-size: 20px;
+        margin-right: 5px;
     }
 
     &__input {
@@ -9,6 +10,7 @@
         font-size: 18px;
         border: 5px black solid;
         border-radius: 15px;
+        margin-right: 10px;
 
 
         &:focus {

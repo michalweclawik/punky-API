@@ -25,8 +25,6 @@ const Nav = (props) => {
           handleFilters={handleFilters}
           acidicchecked={acidicchecked}
         />
-
-        <a href="/">Contact</a>
       </div>
     </div>
   );
