@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SearchBox from "../SearchBox/SearchBox";
-import FiltersList from "../FiltersList/FiltersList";
+import FiltersList from "../../containers/FiltersList/FiltersList";
 import "./Nav.scss";
 
 const Nav = (props) => {

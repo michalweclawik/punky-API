@@ -1,6 +1,6 @@
 import React from "react";
 import "./Main.scss";
-import CardList from "../CardList/CardList";
+import CardList from "../../containers/CardList/CardList";
 
 const Main = ({ beersArr }) => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import "./FiltersList";
-import FilterOption from "../FilterOption/FilterOption";
+import FilterOption from "../../components/FilterOption/FilterOption";
 
 const FiltersList = (props) => {
   const { handleFilters, highABVchecked, acidicchecked } = props;
