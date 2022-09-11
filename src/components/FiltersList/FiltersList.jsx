@@ -3,15 +3,21 @@ import "./FiltersList";
 import FilterOption from "../FilterOption/FilterOption";
 
 const FiltersList = (props) => {
-  const { handleFilters, highABVchecked } = props;
+  const { handleFilters, highABVchecked, acidicchecked } = props;
 
   return (
-    <div>
+    <div className="filterOption">
       <h3>Filters:</h3>
       <FilterOption
         text="ABV greater than 6.0%"
         value={"High ABV"}
-        highABVchecked={highABVchecked}
+        ischecked={highABVchecked}
+        handleFilters={handleFilters}
+      />
+      <FilterOption
+        text="Acidic (ph<4)"
+        value={"Acidic"}
+        ischecked={acidicchecked}
         handleFilters={handleFilters}
       />
     </div>

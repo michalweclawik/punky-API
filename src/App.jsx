@@ -9,15 +9,30 @@ function App() {
   const [beerArrayForSearch, setbeerArrayForSearch] = useState(beers);
 
   const [highABVchecked, setHighABVchecked] = useState(false);
+  const [acidicchecked, setacidicchecked] = useState(false);
 
-  const handleFilters = () => {
-    setHighABVchecked(!highABVchecked);
-    console.log(highABVchecked);
-    if (!highABVchecked) {
-      const filteredBeersByHighABV = beers.filter((beer) => beer.abv > 6);
-      setbeerArrayForSearch(filteredBeersByHighABV);
-    } else {
-      setbeerArrayForSearch(beers);
+  const handleFilters = (e) => {
+    // console.log(e.target.value);
+
+    if (e.target.value == "High ABV") {
+      setHighABVchecked(!highABVchecked);
+      console.log("pressed");
+      if (!highABVchecked) {
+        const filteredBeersByHighABV = beers.filter((beer) => beer.abv > 6);
+        setbeerArrayForSearch(filteredBeersByHighABV);
+      } else {
+        setbeerArrayForSearch(beers);
+      }
+      // } else if (e.target.value == "Acidic") {
+      //   setacidicchecked(!acidicchecked);
+      //   if (!acidicchecked) {
+      //     const filteredBeersByAcidic = beers.filter((beer) => beer.ph < 4);
+      //     //  || beer.ph = null);
+      //     setbeerArrayForSearch(filteredBeersByAcidic);
+      //   }
+      // } else {
+      //   setbeerArrayForSearch(beers);
+      // }
     }
   };
 
@@ -41,6 +56,7 @@ function App() {
           searchTerms={searchTerms}
           highABVchecked={highABVchecked}
           handleFilters={handleFilters}
+          acidicchecked={acidicchecked}
         />
       </section>
 
