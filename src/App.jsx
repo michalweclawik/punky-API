@@ -2,17 +2,26 @@ import "./App.scss";
 import Nav from "./components/Nav/Nav";
 import Main from "./components/Main/Main";
 import { useState } from "react";
-import beers from "./data/beers";
+// import beers from "./data/beers";
 
 function App() {
   // api
-  const [beerArrayForSearch, setbeerArrayForSearch] = useState(beers);
+  const [beersArray, setbeersArray] = useState([]);
   // Search
   const [searchTerms, setSearchTerms] = useState("");
 
   // filters
   const [highABVchecked, setHighABVchecked] = useState(false);
   const [acidicchecked, setacidicchecked] = useState(false);
+
+  const getBeers = async () => {
+    const url = `https://api.punkapi.com/v2/beers`;
+    const res = await fetch(url);
+    const data = await res.json();
+    setbeersArray(data);
+  };
+
+  // getBeers();
 
   const handleFilters = (e) => {
     // console.log(e.target.value);
@@ -21,21 +30,23 @@ function App() {
       setHighABVchecked(!highABVchecked);
 
       if (!highABVchecked) {
-        const filteredBeersByHighABV = beers.filter((beer) => beer.abv > 6);
-        setbeerArrayForSearch(filteredBeersByHighABV);
+        const filteredBeersByHighABV = beersArray.filter(
+          (beer) => beer.abv > 6
+        );
+        setbeersArray(filteredBeersByHighABV);
       } else {
-        setbeerArrayForSearch(beers);
+        getBeers();
       }
     }
     if (e.target.value == "Acidic") {
       setacidicchecked(!acidicchecked);
 
       if (!acidicchecked) {
-        const filteredBeersByAcidic = beers.filter((beer) => beer.ph < 4);
+        const filteredBeersByAcidic = beersArray.filter((beer) => beer.ph < 4);
         //  || beer.ph = null);
-        setbeerArrayForSearch(filteredBeersByAcidic);
+        setbeersArray(filteredBeersByAcidic);
       } else {
-        setbeerArrayForSearch(beers);
+        getBeers();
       }
     }
   };
@@ -46,26 +57,27 @@ function App() {
     setSearchTerms(clearInput);
   };
 
-  const filteredBeers = beerArrayForSearch.filter((beer) => {
+  const filteredBeers = beersArray.filter((beer) => {
     const beerToLowerCase = beer.name.toLowerCase();
     return beerToLowerCase.includes(searchTerms);
   });
 
   return (
     <div className="app">
+      <button onClick={getBeers}>Load page </button>
       <section className="nav">
         <Nav
           label="beer"
           handleInput={handleInput}
           searchTerms={searchTerms}
-          highABVchecked={highABVchecked}
           handleFilters={handleFilters}
           acidicchecked={acidicchecked}
+          highABVchecked={highABVchecked}
         />
       </section>
 
       <section className="app__main">
-        <Main beersArr={filteredBeers} />
+        {beersArray && <Main beersArr={filteredBeers} />}
       </section>
     </div>
   );
