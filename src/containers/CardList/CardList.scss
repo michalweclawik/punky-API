@@ -6,3 +6,20 @@
 
 
 }
+
+
+@media screen and (max-width: 1200px) {
+    .cardList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+
+@media screen and (max-width: 810px) {
+    .cardList {
+        display: flex;
+        flex-direction: column;
+    }
+}
