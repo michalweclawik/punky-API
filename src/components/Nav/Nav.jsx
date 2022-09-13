@@ -3,14 +3,7 @@ import FiltersList from "../../containers/FiltersList/FiltersList";
 import "./Nav.scss";
 
 const Nav = (props) => {
-  const {
-    handleInput,
-    searchTerms,
-    handleFilters,
-    highABVchecked,
-    acidicchecked,
-    classicchecked,
-  } = props;
+  const { handleInput, searchTerms, handleFilters } = props;
   return (
     <div className="navbar">
       <h1 className="navbar__title">Punk BEER</h1>
@@ -20,12 +13,7 @@ const Nav = (props) => {
           searchTerm={searchTerms}
           handleInput={handleInput}
         />
-        <FiltersList
-          handleFilters={handleFilters}
-          highABVchecked={highABVchecked}
-          acidicchecked={acidicchecked}
-          classicchecked={classicchecked}
-        />
+        <FiltersList handleFilters={handleFilters} />
       </div>
     </div>
   );

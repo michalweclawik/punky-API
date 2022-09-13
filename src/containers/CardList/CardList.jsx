@@ -5,7 +5,6 @@ import "./CardList.scss";
 const CardList = (props) => {
   const { beersArray } = props;
 
-  // const cardJSX=beersArray.map(beer=>)
   return (
     <div className="cardList">
       {beersArray.map((beer) => {

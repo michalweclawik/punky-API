@@ -3,8 +3,7 @@ import "./FiltersList.scss";
 import FilterOption from "../../components/FilterOption/FilterOption";
 
 const FiltersList = (props) => {
-  const { handleFilters, highABVchecked, acidicchecked, classicchecked } =
-    props;
+  const { handleFilters } = props;
 
   return (
     <div className="filtersList">
@@ -13,19 +12,16 @@ const FiltersList = (props) => {
         <FilterOption
           text="ABV > 6.0%"
           value={"High ABV"}
-          ischecked={highABVchecked}
           handleFilters={handleFilters}
         />
         <FilterOption
           text="Acidic (ph<4)"
           value={"Acidic"}
-          ischecked={acidicchecked}
           handleFilters={handleFilters}
         />
         <FilterOption
           text="Classic Range"
           value={"ClassicRange"}
-          ischecked={classicchecked}
           handleFilters={handleFilters}
         />
       </div>
