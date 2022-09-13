@@ -10,22 +10,22 @@ const beerCard = ({ beer }) => {
         <p className="beerCard__tagline">{beer.tagline}</p>
       </div>
       <div className="beerCard__figures">
-        <dl className="beerCard__figure">
-          <dt className="beerCard__figure-label">ABV</dt>
-          <dd className="beerCard__figure-value">{beer.abv}</dd>
-        </dl>
-        <dl className="beerCard__figure">
-          <dt className="beerCard__figure-label">IBU</dt>
-          <dd className="beerCard__figure-value">{beer.ibu}</dd>
-        </dl>
-        <dl className="beerCard__figure">
-          <dt className="beerCard__figure-label">EBC</dt>
-          <dd className="beerCard__figure-value">{beer.ebc}</dd>
-        </dl>
-        <dl className="beerCard__figure">
-          <dt className="beerCard__figure-label">PH</dt>
-          <dd className="beerCard__figure-value">{beer.ph}</dd>
-        </dl>
+        <p className="beerCard__figure">
+          <p className="beerCard__figure-label">ABV</p>
+          <p className="beerCard__figure-value">{beer.abv}</p>
+        </p>
+        <p className="beerCard__figure">
+          <p className="beerCard__figure-label">IBU</p>
+          <p className="beerCard__figure-value">{beer.ibu}</p>
+        </p>
+        <p className="beerCard__figure">
+          <p className="beerCard__figure-label">EBC</p>
+          <p className="beerCard__figure-value">{beer.ebc}</p>
+        </p>
+        <p className="beerCard__figure">
+          <p className="beerCard__figure-label">PH</p>
+          <p className="beerCard__figure-value">{beer.ph}</p>
+        </p>
       </div>
       <ul className="beerCard__list">
         <li className="beerCard__list-header">Food Pairings</li>

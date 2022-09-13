@@ -2,10 +2,9 @@ import "./App.scss";
 import Nav from "./components/Nav/Nav";
 import Main from "./components/Main/Main";
 import { useState } from "react";
-// import beers from "./data/beers";
 
 function App() {
-  // api
+  // API
   const [beersArray, setbeersArray] = useState([]);
   // Search
   const [searchTerms, setSearchTerms] = useState("");
@@ -13,6 +12,7 @@ function App() {
   // filters
   const [highABVchecked, setHighABVchecked] = useState(false);
   const [acidicchecked, setacidicchecked] = useState(false);
+  const [classicchecked, setclassicchecked] = useState(false);
 
   const getBeers = async () => {
     const url = `https://api.punkapi.com/v2/beers`;
@@ -24,9 +24,7 @@ function App() {
   // getBeers();
 
   const handleFilters = (e) => {
-    // console.log(e.target.value);
-
-    if (e.target.value == "High ABV") {
+    if (e.target.value === "High ABV") {
       setHighABVchecked(!highABVchecked);
 
       if (!highABVchecked) {
@@ -38,13 +36,26 @@ function App() {
         getBeers();
       }
     }
-    if (e.target.value == "Acidic") {
+    if (e.target.value === "Acidic") {
       setacidicchecked(!acidicchecked);
 
       if (!acidicchecked) {
         const filteredBeersByAcidic = beersArray.filter((beer) => beer.ph < 4);
-        //  || beer.ph = null);
         setbeersArray(filteredBeersByAcidic);
+      } else {
+        getBeers();
+      }
+    }
+    if (e.target.value === "ClassicRange") {
+      console.log(e.target.value);
+      setclassicchecked(!classicchecked);
+
+      if (!classicchecked) {
+        const filteredBeersByClassic = beersArray.filter(
+          (beer) => beer.first_brewed.split("/")[1] < 2008
+        );
+
+        setbeersArray(filteredBeersByClassic);
       } else {
         getBeers();
       }
@@ -73,6 +84,7 @@ function App() {
           handleFilters={handleFilters}
           acidicchecked={acidicchecked}
           highABVchecked={highABVchecked}
+          classicchecked={classicchecked}
         />
       </section>
 

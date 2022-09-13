@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import SearchBox from "../SearchBox/SearchBox";
 import FiltersList from "../../containers/FiltersList/FiltersList";
 import "./Nav.scss";
@@ -10,6 +9,7 @@ const Nav = (props) => {
     handleFilters,
     highABVchecked,
     acidicchecked,
+    classicchecked,
   } = props;
   return (
     <div className="navbar">
@@ -21,9 +21,10 @@ const Nav = (props) => {
           handleInput={handleInput}
         />
         <FiltersList
-          highABVchecked={highABVchecked}
           handleFilters={handleFilters}
+          highABVchecked={highABVchecked}
           acidicchecked={acidicchecked}
+          classicchecked={classicchecked}
         />
       </div>
     </div>

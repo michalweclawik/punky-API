@@ -1,4 +1,5 @@
 import React from "react";
+import "./FilterOption.scss";
 
 const FilterOption = (props) => {
   const { text, handleFilters, ischecked, value } = props;

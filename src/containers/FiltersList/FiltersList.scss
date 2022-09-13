@@ -1,0 +1,11 @@
+.filtersList {
+    display: flex;
+    flex-direction: column;
+
+    &__options {
+        display: flex;
+        flex-direction: row;
+        padding-left: 10px;
+    }
+
+}

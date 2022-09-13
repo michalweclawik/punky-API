@@ -11,6 +11,7 @@ const SearchBox = (props) => {
         {capitalizedLabel}
       </label>
       <input
+        placeholder="Type here..."
         type="text"
         name={label}
         value={searchTerm}
