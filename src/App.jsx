@@ -49,20 +49,24 @@ function App() {
   });
 
   return (
-    <div className="app">
-      <button onClick={getBeers}>Load page </button>
+    <Router>
+      <div className="app">
+        <button onClick={getBeers}>Load page </button>
 
-      <Nav
-        label="beer"
-        handleInput={handleInput}
-        searchTerms={searchTerms}
-        handleFilters={handleFilters}
-      />
-
-      <section className="app__main">
-        {beersArray && <Main beersArr={filteredBeers} />}
-      </section>
-    </div>
+        <Nav
+          label="beer"
+          handleInput={handleInput}
+          searchTerms={searchTerms}
+          handleFilters={handleFilters}
+        />
+        <Routes>
+          <Route
+            path="/"
+            element={filteredBeers && <Main beersArr={filteredBeers} />}
+          ></Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
