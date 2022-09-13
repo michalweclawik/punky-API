@@ -3,6 +3,7 @@ import Nav from "./components/Nav/Nav";
 import Main from "./components/Main/Main";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CardDetail from "./containers/CardDetail/CardDetail";
 
 function App() {
   // API
@@ -63,6 +64,10 @@ function App() {
           <Route
             path="/"
             element={filteredBeers && <Main beersArr={filteredBeers} />}
+          ></Route>
+          <Route
+            part="/carddetail/:beerId"
+            element={<CardDetail beerArry={filteredBeers} />}
           ></Route>
         </Routes>
       </div>

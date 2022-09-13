@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../../components/Card/Card";
 import "./CardList.scss";
+import { Link } from "react-router-dom";
 
 const CardList = (props) => {
   const { beersArray } = props;
@@ -9,9 +10,13 @@ const CardList = (props) => {
     <div className="cardList">
       {beersArray.map((beer) => {
         return (
-          <div className="cardList__beerCard" key={beer.id}>
+          <Link
+            to={`/carddetail/${beer.id}`}
+            className="cardList__beerCard"
+            key={beer.id}
+          >
             <Card beer={beer} />
-          </div>
+          </Link>
         );
       })}
     </div>
