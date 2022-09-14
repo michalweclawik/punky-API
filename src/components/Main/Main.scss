@@ -12,7 +12,7 @@
     color: black;
 
     &__heading {
-        margin-top: 6%;
+        margin-top: 7%;
         width: 100%;
         text-align: center;
         display: inline-block;
@@ -23,24 +23,27 @@
     }
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1250px) {
     .main {
 
 
 
+
         &__heading {
-            font-size: 4vh;
+            margin-top: 100px;
             width: 100%;
+            height: auto;
             text-align: center;
             display: inline-block;
+            font-size: 4vh;
             font-weight: bolder;
-            margin-top: 30%;
+
 
         }
     }
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 830px) {
     .main {
         width: 100%;
         display: inline-block;
@@ -48,11 +51,11 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
+
 
 
         &__heading {
-            margin-top: 30%;
+            margin-top: 150px;
             width: 100%;
             text-align: center;
             display: inline-block;

@@ -10,7 +10,7 @@
     margin-bottom: 10%;
 
     &__title {
-        font-size: 5vh;
+        font-size: 30px;
         font-weight: bold;
     }
 
@@ -23,29 +23,22 @@
 
     }
 
-    & a {
-        padding: 10px;
-        text-decoration: none;
-        width: auto;
-        height: auto;
-        border: 1px solid black;
-        border-radius: 15px;
-        margin-left: 20px;
 
-    }
 
 }
 
 
 
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 830px) {
     .navbar {
         display: flex;
         flex-direction: column;
         height: 15%;
 
         &__title {
-
+            margin-top: -10px;
+            font-size: 20px;
             font-weight: bold;
         }
 
@@ -56,16 +49,6 @@
             align-items: center;
         }
 
-        & a {
-            padding: 10px;
-            text-decoration: none;
-            width: auto;
-            height: auto;
-            border: 1px solid black;
-            border-radius: 15px;
-            margin-left: 10px;
-            font-size: 8px;
 
-        }
     }
 }

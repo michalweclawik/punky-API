@@ -4,8 +4,6 @@
 
 }
 
-
-
 .beerCard2 {
     margin: 110px auto;
     width: 350px;
@@ -109,4 +107,11 @@
         font-weight: bold;
 
     }
+}
+
+@media screen and (max-width:830px) {
+    .beerCard2 {
+        margin-top: 170px;
+    }
+
 }
