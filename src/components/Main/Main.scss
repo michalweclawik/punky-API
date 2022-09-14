@@ -25,21 +25,13 @@
 
 @media screen and (max-width: 1250px) {
     .main {
-
-
-
-
         &__heading {
             margin-top: 100px;
             width: 100%;
             height: auto;
-            text-align: center;
-            display: inline-block;
             font-size: 4vh;
-            font-weight: bolder;
-
-
         }
+
     }
 }
 
@@ -57,10 +49,8 @@
         &__heading {
             margin-top: 150px;
             width: 100%;
-            text-align: center;
-            display: inline-block;
             font-size: 20px;
-            font-weight: bolder;
+
 
 
         }

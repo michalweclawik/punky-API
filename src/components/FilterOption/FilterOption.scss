@@ -16,15 +16,9 @@
 
 @media screen and (max-width: 830px) {
     .filterOption {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         width: 90px;
         border: 1px solid black;
         text-align: center;
-        margin-left: 10px;
-        border-radius: 20px;
-
         font-size: 10px;
 
         input {
