@@ -11,7 +11,7 @@ const CardList = (props) => {
       {beersArray.map((beer) => {
         return (
           <Link
-            to={`/carddetail/${beer.id}`}
+            to={`/card/${beer.id}`}
             className="cardList__beerCard"
             key={beer.id}
           >

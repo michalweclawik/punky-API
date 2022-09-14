@@ -1,10 +1,12 @@
 import React from "react";
 import "./Card.scss";
 
-const beerCard = ({ beer }) => {
+const Card = ({ beer }) => {
   return (
     <div className="beerCard">
       <img className="beerCard__img" src={beer.image_url} alt={beer.name} />
+
+      {/* coomponent? */}
       <div className="beerCard__heading">
         <p className="beerCard__name">{beer.name}</p>
         <p className="beerCard__tagline">{beer.tagline}</p>
@@ -38,4 +40,4 @@ const beerCard = ({ beer }) => {
     </div>
   );
 };
-export default beerCard;
+export default Card;

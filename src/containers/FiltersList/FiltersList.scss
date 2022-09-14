@@ -9,3 +9,23 @@
     }
 
 }
+
+@media screen and (max-width: 400px) {
+
+    .filtersList {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            font-size: 10px;
+        }
+
+        &__options {
+            display: flex;
+            flex-direction: row;
+            padding-left: 10px;
+        }
+
+    }
+
+}

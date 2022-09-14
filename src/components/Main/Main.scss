@@ -6,14 +6,17 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
+    background: rgb(105, 101, 181);
+    background: linear-gradient(197deg, rgba(105, 101, 181, 1) 10%, rgba(39, 170, 49, 1) 49%, rgba(57, 58, 112, 1) 89%);
+    margin-bottom: 50px;
+    color: black;
 
     &__heading {
         margin-top: 6%;
         width: 100%;
         text-align: center;
         display: inline-block;
-        font-size: 40px;
+        font-size: 5vh;
         font-weight: bolder;
 
 
@@ -26,13 +29,12 @@
 
 
         &__heading {
-            margin-top: 10%;
+            font-size: 4vh;
             width: 100%;
             text-align: center;
             display: inline-block;
-            font-size: 20px;
             font-weight: bolder;
-
+            margin-top: 30%;
 
         }
     }

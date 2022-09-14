@@ -1,7 +1,7 @@
 import "./App.scss";
 import Nav from "./components/Nav/Nav";
 import Main from "./components/Main/Main";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CardDetail from "./containers/CardDetail/CardDetail";
 
@@ -18,6 +18,9 @@ function App() {
     setbeersArray(data);
   };
 
+  useEffect(() => {
+    getBeers();
+  }, [searchTerms]);
   // getBeers();
 
   const handleFilters = (e) => {
@@ -52,8 +55,6 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <button onClick={getBeers}>Load page </button>
-
         <Nav
           label="beer"
           handleInput={handleInput}
@@ -65,9 +66,10 @@ function App() {
             path="/"
             element={filteredBeers && <Main beersArr={filteredBeers} />}
           ></Route>
+
           <Route
-            part="/carddetail/:beerId"
-            element={<CardDetail beerArry={filteredBeers} />}
+            path="/card/:beerId"
+            element={<CardDetail beersArr={filteredBeers} />}
           ></Route>
         </Routes>
       </div>

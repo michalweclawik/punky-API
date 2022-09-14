@@ -10,7 +10,7 @@
     margin-bottom: 10%;
 
     &__title {
-        font-size: 35px;
+        font-size: 5vh;
         font-weight: bold;
     }
 
@@ -36,19 +36,22 @@
 
 }
 
-@media screen and (max-width: 850px) {
+
+
+@media screen and (max-width: 400px) {
     .navbar {
         display: flex;
         flex-direction: column;
         height: 15%;
 
         &__title {
-            font-size: 15px;
+
             font-weight: bold;
         }
 
         &__links {
             display: flex;
+            flex-direction: column;
             margin: 0 auto;
             align-items: center;
         }
