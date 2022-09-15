@@ -65,7 +65,7 @@ function App() {
             element={<CardDetail beersArr={filteredBeers} />}
           ></Route>
           <Route
-            path="/"
+            path="/punky-API"
             element={filteredBeers && <Main beersArr={filteredBeers} />}
           ></Route>
         </Routes>

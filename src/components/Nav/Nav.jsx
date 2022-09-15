@@ -7,7 +7,7 @@ const Nav = (props) => {
   const { handleInput, searchTerms, handleFilters } = props;
   return (
     <div className="navbar">
-      <Link to="/" className="navbar__title">
+      <Link to="/punky-API" className="navbar__title">
         Punk BEER
       </Link>
       <div className="navbar__links">
