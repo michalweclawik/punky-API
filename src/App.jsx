@@ -6,9 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CardDetail from "./containers/CardDetail/CardDetail";
 
 function App() {
-  // API
   const [beersArray, setbeersArray] = useState([]);
-  // Search
+
   const [searchTerms, setSearchTerms] = useState("");
 
   const getBeers = async () => {
@@ -20,8 +19,7 @@ function App() {
 
   useEffect(() => {
     getBeers();
-  }, [searchTerms]);
-  // getBeers();
+  }, []);
 
   const handleFilters = (e) => {
     if (e.target.checked) {
