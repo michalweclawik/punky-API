@@ -61,13 +61,12 @@ function App() {
         />
         <Routes>
           <Route
-            path="/"
-            element={filteredBeers && <Main beersArr={filteredBeers} />}
-          ></Route>
-
-          <Route
             path="/card/:beerId"
             element={<CardDetail beersArr={filteredBeers} />}
+          ></Route>
+          <Route
+            path="/"
+            element={filteredBeers && <Main beersArr={filteredBeers} />}
           ></Route>
         </Routes>
       </div>
