@@ -7,7 +7,6 @@ import CardDetail from "./containers/CardDetail/CardDetail";
 
 function App() {
   const [beersArray, setbeersArray] = useState([]);
-
   const [searchTerms, setSearchTerms] = useState("");
 
   const getBeers = async () => {

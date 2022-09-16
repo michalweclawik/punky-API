@@ -31,13 +31,13 @@ This web based application allowed you to search over Brewdog Punk API for your 
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
-Clone repo to youre local machine with :
+Clone repo to your local machine with :
 
 ```
 git clone
 ```
 
-Open repo in youre code edditor then install node modules by typing in yours terminal following command :
+Open repo in your code edditor then install node modules by typing in yours terminal following command :
 
 ```
 npm install
