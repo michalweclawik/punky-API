@@ -11,7 +11,7 @@ function App() {
   const [searchTerms, setSearchTerms] = useState("");
 
   const getBeers = async () => {
-    const url = `https://api.punkapi.com/v2/beers`;
+    const url = `https://api.punkapi.com/v2/beers?page=1&per_page=80`;
     const res = await fetch(url);
     const data = await res.json();
     setbeersArray(data);
