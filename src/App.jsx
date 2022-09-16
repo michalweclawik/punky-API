@@ -59,6 +59,7 @@ function App() {
           searchTerms={searchTerms}
           handleFilters={handleFilters}
         />
+
         <Routes>
           <Route
             path="/card/:beerId"
