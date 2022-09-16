@@ -64,7 +64,7 @@ npm run start
 
 ## 🎈 Usage <a name="usage"></a>
 
-- Type in search box desired name of beer to get more information about it
+- Type in search box desired name of beer you looking for
 - To filter beers aginst specific paramiter use filter options provided
 - To find more information about beer press beer card
 - To go back to main page press LOGO
