@@ -2,7 +2,7 @@ import "./App.scss";
 import Nav from "./components/Nav/Nav";
 import Main from "./components/Main/Main";
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as HashRouter, Routes, Route } from "react-router-dom";
 import CardDetail from "./containers/CardDetail/CardDetail";
 
 function App() {
@@ -51,7 +51,7 @@ function App() {
   });
 
   return (
-    <Router>
+    <HashRouter>
       <div className="app">
         <Nav
           label="beer"
@@ -70,7 +70,7 @@ function App() {
           ></Route>
         </Routes>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
