@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/punky-API/static/css/main.3bf9ac5a.css",
-    "main.js": "/punky-API/static/js/main.a922cbf3.js",
+    "main.js": "/punky-API/static/js/main.6d59fd15.js",
     "index.html": "/punky-API/index.html",
     "main.3bf9ac5a.css.map": "/punky-API/static/css/main.3bf9ac5a.css.map",
-    "main.a922cbf3.js.map": "/punky-API/static/js/main.a922cbf3.js.map"
+    "main.6d59fd15.js.map": "/punky-API/static/js/main.6d59fd15.js.map"
   },
   "entrypoints": [
     "static/css/main.3bf9ac5a.css",
-    "static/js/main.a922cbf3.js"
+    "static/js/main.6d59fd15.js"
   ]
 }
