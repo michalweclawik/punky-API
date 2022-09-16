@@ -1,15 +1,17 @@
 .navbar {
-
+    position: sticky;
+    top: 0;
     width: 100%;
+    min-height: 90px;
     height: 10%;
     background-color: bisque;
     padding: 25px;
     display: flex;
     align-items: center;
-    position: fixed;
-    margin-bottom: 10%;
+    z-index: 999;
 
-    &__title {
+
+    &__logo {
         font-size: 30px;
         font-weight: bold;
     }
@@ -25,12 +27,13 @@
 
 @media screen and (max-width: 830px) {
     .navbar {
+        min-height: 140px;
         display: flex;
         flex-direction: column;
         height: 15%;
 
-        &__title {
-            margin-top: -10px;
+        &__logo {
+            // margin-top: -10px;
             font-size: 20px;
 
         }
