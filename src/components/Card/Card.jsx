@@ -2,8 +2,10 @@ import React from "react";
 import "./Card.scss";
 
 const Card = ({ beer }) => {
+  // destriucting object
   const { image_url, name, tagline, abv, ibu, ebc, ph, food_pairing } = beer;
 
+  // beer info
   return (
     <div className="beerCard">
       <img className="beerCard__img" src={image_url} alt={name} />

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const Nav = (props) => {
   const { handleInput, searchTerms, handleFilters } = props;
   return (
+    // links for routing
     <div className="navbar">
       <Link to="/punky-API" className="navbar__logo">
         Punk BEER

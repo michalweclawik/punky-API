@@ -6,9 +6,11 @@ import { BrowserRouter as HashRouter, Routes, Route } from "react-router-dom";
 import CardDetail from "./containers/CardDetail/CardDetail";
 
 function App() {
+  // set
   const [beersArray, setbeersArray] = useState([]);
   const [searchTerms, setSearchTerms] = useState("");
 
+  //  get data
   const getBeers = async () => {
     const url = `https://api.punkapi.com/v2/beers?page=1&per_page=80`;
     const res = await fetch(url);
@@ -20,6 +22,7 @@ function App() {
     getBeers();
   }, []);
 
+  // filters function
   const handleFilters = (e) => {
     if (e.target.checked) {
       if (e.target.value === "High ABV") {
@@ -38,12 +41,13 @@ function App() {
     }
   };
 
+  // event function
   const handleInput = (e) => {
     e.preventDefault();
     const clearInput = e.target.value.toLowerCase();
     setSearchTerms(clearInput);
   };
-
+  // filtering function
   const filteredBeers = beersArray.filter((beer) => {
     const beerToLowerCase = beer.name.toLowerCase();
     return beerToLowerCase.includes(searchTerms);

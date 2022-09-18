@@ -4,9 +4,9 @@ import "./CardDetail.scss";
 
 const CardDetail = ({ beersArr }) => {
   const { beerId } = useParams();
-
+  // finding card with id
   const beerToDisplay = beersArr.find((beer) => beer.id === Number(beerId));
-
+  // destructing object
   const {
     image_url,
     name,
